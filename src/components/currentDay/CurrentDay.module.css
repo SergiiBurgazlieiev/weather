@@ -1,0 +1,33 @@
+.Left,
+.Right {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.Left span,
+.Right span {margin: 0 0 3rem 0;}
+.Left span:nth-child(1){font-size: 3rem; font-weight: 400;}
+
+.IconHolder {padding: 2rem 0;}
+
+.Icon {
+    font-size: 8rem;
+    color:inherit;
+}
+
+.MainTemp,
+.F {font-size: 4rem;}
+
+@media screen and (max-width: 768px){
+    .Right{display: none;}
+    .IconHolder{padding: 4rem 0; text-align: center;}
+    .IconHolder span:nth-child(1){margin: 0 1rem 0 0;}
+    .Icon{font-size: 6rem;}
+    .Left span{text-align: center;}
+    .Left span:nth-child(1){font-size: 4rem;}
+    .Left span:nth-child(2),
+    .Left span:nth-child(3){font-weight: 400;}
+}

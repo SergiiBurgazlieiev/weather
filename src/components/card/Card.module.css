@@ -1,0 +1,54 @@
+.Card {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: auto;
+    height: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+    transition: all .5s ease-in;
+}
+
+.Card::after {
+    z-index: -1;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background: rgb(100, 43, 115,.2); 
+    background: -webkit-linear-gradient(to bottom, rgb(198, 66, 110,.2), rgb(100, 43, 115,.2)); 
+    background: linear-gradient(to bottom, rgb(198, 66, 110,.2), rgb(100, 43, 115,.2)); 
+
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all .5s ease-in;
+}
+
+.Card:hover::after{
+    transform: scaleY(1);
+    border-top: 2px solid rgba(242, 242, 242,.8);
+}
+
+.Card span i{font-size: 4rem;}
+
+.MinMax {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.SpanMin,
+.SpanMax{padding: 0 1rem;}
+
+@media screen and (max-width: 768px){
+    .Card{font-weight: 400;}
+}
